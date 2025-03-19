@@ -1,0 +1,32 @@
+{
+  "name": "try-ejs",
+  "version": "1.0.0",
+  "description": "This is a project for Sendiko to try out EJS with Express and TailwindCSS",
+  "homepage": "https://github.com/Sendiko/try-ejs#readme",
+  "bugs": {
+    "url": "https://github.com/Sendiko/try-ejs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sendiko/try-ejs.git"
+  },
+  "license": "ISC",
+  "author": "Sendiko",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss-cli -i ./src/styles/tailwind.css -o ./public/css/style.css --watch & nodemon index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.14"
+  }
+}
