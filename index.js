@@ -1,3 +1,4 @@
+const { count } = require("console");
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -21,6 +22,10 @@ app.get("/", (req, res) => {
 
 app.get("/about", (req, res) => {
   renderWithLayout(res, "about", { title: "About Us" });
+});
+
+app.get("/counter", (req, res) => {
+  renderWithLayout(res, "counter", { title: "Counter", initialCount: 0 });
 });
 
 const PORT = 3000;

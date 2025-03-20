@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      let count = <%= initialCount %>; // Initialize from server
+
+      function updateCounter() {
+          document.getElementById("counter").innerText = count;
+      }
+
+      function increment() {
+          count++;
+          updateCounter(); 
+      }
+
+      function decrement() {
+          count--;
+          updateCounter(); 
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+          updateCounter();
+          console.log("updated!"); 
+      });
+    </script>
+  </head>
+  <body>
+    <div class="flex justify-center items-center h-screen">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold">Counter</h1>
+        <p class="text-2xl font-semibold my-4" id="counter">
+          Count: <span id="count"><%= initialCount %></span>
+        </p>
+        <div class="space-x-4">
+          <button
+            id="increment"
+            onclick="increment()"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Increment
+          </button>
+          <button
+            id="decrement"
+            onclick="decrement()"
+            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Decrement
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
